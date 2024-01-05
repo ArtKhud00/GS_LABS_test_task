@@ -30,7 +30,7 @@ int main(){
     socklen_t len;
 
     auto startTime_ = std::chrono::steady_clock::now();
-    for(int i = 0; i < 250000; ++i) {
+    for(int i = 0; i < 600000; ++i) {
         std::string str = "Hello" + std::to_string(i);
         const char* hello = str.c_str();
         sendto(sockfd, hello, strlen(hello),

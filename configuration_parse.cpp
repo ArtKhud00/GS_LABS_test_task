@@ -16,7 +16,7 @@ Config ParseConfigurationFile(const std::string& filename){
         std::vector<std::string> nodes;
         std::vector<int> nodes_weights;
         if(params.count("src_port") > 0){
-            config_struct.udpPort = params.at("src_port").AsInt();
+            config_struct.udp_port = params.at("src_port").AsInt();
         }
         if(params.count("nodes_adresses") > 0){
             json::Array nodes_array = params.at("nodes_adresses").AsArray();
@@ -31,7 +31,7 @@ Config ParseConfigurationFile(const std::string& filename){
             }
         }
         if(params.count("max_datagrams_per_second")>0){
-            config_struct.maxDatagramsPerSecond = params.at("max_datagrams_per_second").AsInt();
+            config_struct.max_datagrams_per_second = params.at("max_datagrams_per_second").AsInt();
         }
         if(!nodes.empty()){
             if(nodes_weights.empty() || nodes_weights.size() != nodes.size()){

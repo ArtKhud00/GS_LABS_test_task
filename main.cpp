@@ -5,6 +5,6 @@ int main() {
     Config config_struct;
     config_struct = ParseConfigurationFile("config_bal.json");
     LoadBalancer load_balancer(config_struct);
-    load_balancer.run();
+    load_balancer.Run();
     return 0;
 }
